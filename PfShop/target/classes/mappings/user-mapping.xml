@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="UserDAO">
+
+	<select id="selectUser" resultType="user">
+		<![CDATA[
+			select * from usershop where id=#{id}
+		]]>
+	</select>
+	
+	<insert id="insertUser" parameterType="user">
+		<![CDATA[
+			insert into usershop(id, password, password2, name, adress, phone, email) values(#{id}, #{password}, #{password2}, #{name}, #{adress}, #{phone}, #{email})
+		]]>
+	</insert>
+	
+	<select id="contentUser" parameterType="user" resultType="user">
+		<![CDATA[
+			select * from usershop where id=#{id}
+		]]>
+	</select>
+	
+	<update id="updateUser" parameterType="user">
+		<![CDATA[
+			update usershop set password=#{password} where id=#{id}
+		]]>
+	</update>
+	
+	<delete id="deleteUser" parameterType="user">
+		<![CDATA[
+			delete from usershop where id=#{id}
+		]]>
+	</delete>
+	
+	<select id="getUser" resultType="user">
+		<![CDATA[
+			select * from usershop where id=#{id} and password=#{password}
+		]]>
+	</select>
+
+</mapper>

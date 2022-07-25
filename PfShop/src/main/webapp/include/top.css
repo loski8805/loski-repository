@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+header{
+  background-color:#f5b8a6;
+  height:90px;
+  line-height:90px;
+  text-align:center;
+  color: white;
+}
+nav {
+  background-color:#b6b6b6;
+  height:50px;
+  line-height:50px;
+  color: white;
+}
+section{
+  background-color:rgb(255, 255, 255);
+  min-height:400px;
+}
+footer{
+  background-color:#f5b8a6;
+  height:50px;
+  line-height:50px;
+  text-align:center;
+  color: white;
+}
+
+a:link{
+ text-decoration:none;
+ color: black;
+}
+a:visited{
+ text-decoration:none;
+ color: black;
+}
+a:hover{
+ text-decoration:underline;
+ color: black;
+}
+a:active{
+ text-decoration:underline;
+ color: black;
+}
+
+#div2{
+line-height:30px;
+}
